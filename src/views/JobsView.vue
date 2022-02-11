@@ -4,12 +4,12 @@
 
 <script>
 import ListItem from "../components/ListItem.vue";
-// import ListMixin from "../mixins/ListMixin";
+import ListMixin from "../mixins/ListMixin";
 export default {
   components: {
     ListItem,
   },
-  // mixins: [ListMixin],
+  mixins: [ListMixin],
 };
 </script>
 

@@ -32,7 +32,6 @@ export default {
     },
   },
   created() {
-    console.log(this.$route.params.id);
     this.$store.dispatch("FETCH_INDIVIDUAL_ITEM", this.id);
   },
 };

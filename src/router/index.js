@@ -5,7 +5,7 @@ import ItemView from "../views/ItemView.vue";
 import AskView from "../views/AskView";
 import JobsView from "../views/JobsView";
 import NewsView from "../views/NewsView";
-import createListView from "../views/CreateListView";
+// import createListView from "../views/CreateListView";
 import bus from "../utils/bus";
 import store from "../store/index.js";
 
