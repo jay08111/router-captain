@@ -10,7 +10,8 @@ export default new Vuex.Store({
     jobs: [],
     ask: [],
     userInfo: {},
-    item: [],
+    item: {},
+    list: [],
   },
   mutations,
   actions,
@@ -29,6 +30,9 @@ export default new Vuex.Store({
     },
     fetchIndividualItem(state) {
       return state.item;
+    },
+    fetchList(state) {
+      return state.list;
     },
   },
   modules: {},
