@@ -1,3 +1,3 @@
-module.exports = {
-  useEslint: false,
-};
+// module.exports = {
+//   useEslint: false,
+// };

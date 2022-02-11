@@ -15,18 +15,21 @@ export default {
     });
   },
   FETCH_JOBS({ commit }) {
-    fetchJobsList().then(({ data }) => commit("setJobs", data));
+    return fetchJobsList().then(({ data }) => commit("setJobs", data));
   },
   FETCH_ASK({ commit }) {
-    fetchAskList().then(({ data }) => commit("setAsk", data));
+    return fetchAskList().then(({ data }) => commit("setAsk", data));
   },
   FETCH_USERINFO({ commit }, name) {
-    fetchUserInfo(name).then(({ data }) => commit("setUserInfo", data));
+    return fetchUserInfo(name).then(({ data }) => commit("setUserInfo", data));
   },
   FETCH_INDIVIDUAL_ITEM({ commit }, id) {
-    fetchIndividualItem(id).then(({ data }) => commit("setItem", data));
+    return fetchIndividualItem(id).then(({ data }) => commit("setItem", data));
   },
   FETCH_LIST({ commit }, pageName) {
-    fetchList(pageName).then(({ data }) => commit("setList", data));
+    return fetchList(pageName).then((response) => {
+      commit("setList", response.data);
+      return response;
+    });
   },
 };

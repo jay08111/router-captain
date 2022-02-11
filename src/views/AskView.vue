@@ -3,17 +3,16 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 import ListItem from "../components/ListItem.vue";
+// import ListMixin from "../mixins/ListMixin";
+import bus from "../utils/bus";
 export default {
   components: {
     ListItem,
   },
-  computed: {
-    ...mapGetters(["fetchAsk"]),
-  },
-  created() {
-    this.$store.dispatch("FETCH_ASK");
+  // mixins: [ListMixin],
+  mounted() {
+    bus.$emit("end : spinner");
   },
 };
 </script>
